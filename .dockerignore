@@ -1,0 +1,16 @@
+.git
+.github
+.next
+.vinext
+.wrangler
+coverage
+dist
+node_modules
+outputs
+work
+
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
