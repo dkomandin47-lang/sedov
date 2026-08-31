@@ -70,9 +70,9 @@ export default function Home() {
           <div className="hero-content">
             <span className="eyebrow">Точный подбор по VIN</span>
             <h1>Нужная деталь.<br /><em>С первого раза.</em></h1>
-            <p className="hero-lead">Подберём оригинальные запчасти и надёжные аналоги под ваш автомобиль. Проверим совместимость, объясним разницу и поможем выбрать.</p>
+            <p className="hero-lead">Подберём оригинальные запчасти и проверенные аналоги именно для вашего автомобиля. Сверим по VIN, проверим совместимость и предложим понятный выбор по цене и сроку.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#request">Подобрать запчасть <span>→</span></a>
+              <a className="button button-primary" href="#request">Подобрать запчасти <span>→</span></a>
               <a className="button button-ghost" href="tel:+79610532770">Позвонить сейчас</a>
             </div>
             <div className="hero-points">
@@ -81,25 +81,14 @@ export default function Home() {
               <span><b>✓</b> Проверенные бренды</span>
             </div>
           </div>
-
-          <div className="hero-media">
-            <img src="/og.png" alt="Тормозной диск, аккумулятор и масляный фильтр SEDOV" />
-            <div className="hero-media-shade" />
-            <div className="hero-note">
-              <span>SEDOV</span>
-              <strong>Запчасти для вашего автомобиля</strong>
-              <small>Саратовское ш., 14 · Балашов</small>
-            </div>
-            <div className="availability-badge"><i /> На связи</div>
-          </div>
         </div>
       </section>
 
       <section className="trust-strip" aria-label="Преимущества">
         <div className="container trust-grid">
-          <div><span>01</span><p><strong>Подбор без ошибок</strong><small>Проверяем деталь по VIN и каталожным номерам</small></p></div>
-          <div><span>02</span><p><strong>Честный выбор</strong><small>Показываем разницу между оригиналом и аналогами</small></p></div>
-          <div><span>03</span><p><strong>Локальный магазин</strong><small>Можно забрать заказ в Балашове</small></p></div>
+          <div><p><strong>Подбор без ошибок</strong><small>Проверяем деталь по VIN и каталожным номерам</small></p></div>
+          <div><p><strong>Понятный выбор</strong><small>Объясняем разницу между оригиналом и аналогами</small></p></div>
+          <div><p><strong>Магазин в Балашове</strong><small>Заказ можно забрать на Саратовском шоссе, 14</small></p></div>
         </div>
       </section>
 
