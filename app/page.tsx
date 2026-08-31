@@ -78,7 +78,7 @@ export default function Home() {
             <div className="hero-points">
               <span><b>✓</b> Проверка по VIN</span>
               <span><b>✓</b> Оригиналы и аналоги</span>
-              <span><b>✓</b> Гарантия на детали</span>
+              <span><b>✓</b> Проверенные бренды</span>
             </div>
           </div>
 
