@@ -205,7 +205,7 @@ export default function Home() {
             <a href="#catalog">Бренды</a>
             <a href="#request">Запросить деталь</a>
             <a href="#contacts">Контакты</a>
-            <div className="nav-contact"><span>Пн–Сб, 09:00–20:00</span><a href="tel:+74951240888">+7 (495) 124-08-88</a></div>
+            <div className="nav-contact"><span>Пн–Сб, 09:00–20:00</span><a href="tel:+79610532770">+7 (961) 053-27-70</a></div>
           </div>
         </nav>
       </header>
@@ -338,19 +338,16 @@ export default function Home() {
             <span className="eyebrow dark">Мы рядом</span>
             <h2>Контакты и пункт выдачи</h2>
             <div className="contact-list">
-              <div><span>⌖</span><p><small>Адрес</small><strong>Москва, ул. Автозаводская, 23А</strong><em>5 минут от метро «Автозаводская»</em></p></div>
+              <div><span>⌖</span><p><small>Адрес</small><strong>Саратовское ш., 14, Балашов</strong><em>Пункт выдачи автозапчастей</em></p></div>
               <div><span>◷</span><p><small>Режим работы</small><strong>Пн–Сб: 09:00–20:00</strong><em>Воскресенье: 10:00–18:00</em></p></div>
-              <div><span>☎</span><p><small>Телефон</small><a href="tel:+74951240888">+7 (495) 124-08-88</a><em>Звонок по России бесплатный</em></p></div>
+              <div><span>☎</span><p><small>Телефон</small><a href="tel:+79610532770">+7 (961) 053-27-70</a><em>Позвоните для подбора и заказа</em></p></div>
             </div>
-            <div className="contact-buttons"><a className="primary-button" href="tel:+74951240888">Позвонить</a><a className="secondary-button" href="https://yandex.ru/maps/?text=Москва%20Автозаводская%2023А" target="_blank" rel="noreferrer">Построить маршрут ↗</a></div>
+            <div className="contact-buttons"><a className="primary-button" href="tel:+79610532770">Позвонить</a><a className="secondary-button" href="https://yandex.ru/maps/?text=Саратовское%20шоссе%2C%2014%2C%20Балашов" target="_blank" rel="noreferrer">Построить маршрут ↗</a></div>
           </div>
-          <div className="map-card" aria-label="Схема расположения пункта выдачи">
-            <div className="map-road road-one" /><div className="map-road road-two" /><div className="map-road road-three" />
-            <span className="map-label label-one">Автозаводская ул.</span><span className="map-label label-two">3-й Автозаводский пр.</span>
-            <span className="metro-mark">M</span><span className="metro-label">Автозаводская</span>
-            <span className="map-pin"><b>S</b><i /></span>
-            <div className="map-popup"><strong>SEDOV</strong><small>Пункт выдачи · Открыто</small></div>
-          </div>
+          <a className="map-card" href="https://yandex.ru/maps/?text=Саратовское%20шоссе%2C%2014%2C%20Балашов" target="_blank" rel="noreferrer" aria-label="Открыть карту проезда к пункту выдачи в Балашове">
+            <img className="map-image" src="/balashov-map.png" alt="Карта проезда к магазину автозапчастей: Саратовское шоссе, 14, Балашов" />
+            <span className="map-open-hint">Открыть в Яндекс Картах ↗</span>
+          </a>
         </div>
       </section>
 
@@ -359,7 +356,7 @@ export default function Home() {
           <a className="logo light" href="#top"><span className="logo-mark">S</span><span className="logo-type"><strong>SEDOV</strong><small>автозапчасти</small></span></a>
           <p>Запчасти с точным подбором<br />и гарантией совместимости.</p>
           <div className="footer-links"><a href="#catalog">Каталог</a><a href="#categories">Категории</a><a href="#request">Подбор по VIN</a><a href="#contacts">Контакты</a></div>
-          <div className="footer-contact"><a href="tel:+74951240888">+7 (495) 124-08-88</a><span>Пн–Сб, 09:00–20:00</span></div>
+          <div className="footer-contact"><a href="tel:+79610532770">+7 (961) 053-27-70</a><span>Пн–Сб, 09:00–20:00</span></div>
         </div>
         <div className="container footer-bottom"><span>© 2026 SEDOV. Демо-концепт магазина автозапчастей.</span><span>Цены на сайте не являются публичной офертой</span></div>
       </footer>
