@@ -69,7 +69,7 @@ export default function Home() {
         <div className="container hero-layout">
           <div className="hero-content">
             <span className="eyebrow">Точный подбор по VIN</span>
-            <h1>Нужная деталь.<br /><em>С первого раза.</em></h1>
+            <h1><span>Нужная деталь.</span><em>С первого раза.</em></h1>
             <p className="hero-lead">Подберём оригинальные запчасти и проверенные аналоги именно для вашего автомобиля. Сверим по VIN, проверим совместимость и предложим понятный выбор по цене и сроку.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#request">Подобрать запчасти <span>→</span></a>
