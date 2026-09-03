@@ -153,18 +153,14 @@ p, li, small { text-wrap: pretty; }
 .how-intro { position: sticky; top: 125px; }
 .how-intro > p { max-width: 440px; margin: 24px 0 0; color: #b9bdb9; font-size: 15px; line-height: 1.75; }
 .how-intro .button { margin-top: 31px; }
-.steps-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid #444744; }
-.steps-list li { position: relative; min-height: 142px; display: flex; align-items: center; border-bottom: 1px solid #444744; }
-.steps-list li > div { width: 100%; }
-.steps-list li:not(:last-child)::after { content: "↓"; position: absolute; z-index: 1; left: 50%; bottom: -20px; width: 42px; height: 39px; display: grid; place-items: center; background: var(--ink-soft); color: var(--orange); font-size: 25px; line-height: 1; transform: translateX(-50%); }
-.steps-list li:hover:not(:last-child)::after { animation: step-arrow-flow .65s ease-in-out infinite; }
-.steps-list h3 { margin: 0; font-size: 21px; text-align: center; }
-.steps-list p { max-width: 510px; margin: 8px auto 0; color: #a5aaa6; font-size: 13px; line-height: 1.68; }
-
-@keyframes step-arrow-flow {
-  0%, 100% { transform: translate(-50%, -3px); }
-  50% { transform: translate(-50%, 6px); }
-}
+.steps-list { max-width: 540px; list-style: none; margin: 0 auto; padding: 12px 0; counter-reset: process-step; }
+.steps-list li { position: relative; min-height: 116px; display: grid; grid-template-columns: 32px 1fr; gap: 18px; align-items: start; counter-increment: process-step; }
+.steps-list li:last-child { min-height: 0; }
+.steps-list li::before { content: counter(process-step); position: relative; z-index: 1; width: 32px; height: 32px; display: grid; place-items: center; border: 2px solid var(--orange); border-radius: 50%; background: var(--ink-soft); color: white; font-size: 12px; font-weight: 850; line-height: 1; }
+.steps-list li:not(:last-child)::after { content: ""; position: absolute; left: 15px; top: 32px; bottom: 0; width: 2px; background: rgba(240,90,36,.55); }
+.steps-list li > div { width: 100%; padding: 3px 0 28px; }
+.steps-list h3 { margin: 0; font-size: 19px; text-align: left; }
+.steps-list p { max-width: 490px; margin: 5px 0 0; color: #a5aaa6; font-size: 13px; line-height: 1.62; }
 
 .about-section { padding: 110px 0; background: #e7e4da; }
 .about-layout { display: grid; grid-template-columns: 1fr 500px; gap: 110px; align-items: center; }
