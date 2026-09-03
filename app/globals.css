@@ -123,9 +123,9 @@ p, li, small { text-wrap: pretty; }
 .service-card:focus-within a b { animation: card-arrow-sway .7s ease-in-out infinite; }
 
 @keyframes hero-arrow-sway {
-  0%, 100% { transform: translateX(0); }
-  35% { transform: translateX(6px); }
-  70% { transform: translateX(-2px); }
+  0%, 100% { transform: translateY(0); }
+  35% { transform: translateY(6px); }
+  70% { transform: translateY(-2px); }
 }
 
 @keyframes card-arrow-sway {

@@ -72,7 +72,7 @@ export default function Home() {
             <h1><span>Большой</span><span>каталог</span><em>автозапчастей</em></h1>
             <p className="hero-lead">Подберём оригинальные запчасти и проверенные аналоги именно для вашего автомобиля. Сверим по VIN, проверим совместимость и предложим понятный выбор по цене и сроку.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#request">Подобрать запчасти <span>→</span></a>
+              <a className="button button-primary" href="#request">Подобрать запчасти <span>↓</span></a>
               <a className="button button-ghost" href="tel:+79610532770">Позвонить сейчас</a>
             </div>
             <div className="hero-points">
