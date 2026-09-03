@@ -155,14 +155,14 @@ p, li, small { text-wrap: pretty; }
 .how-intro .button { margin-top: 31px; }
 .steps-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid #444744; }
 .steps-list li { position: relative; min-height: 142px; display: flex; align-items: center; padding-left: 95px; border-bottom: 1px solid #444744; }
-.steps-list li:not(:last-child)::after { content: "↓"; position: absolute; z-index: 1; left: 21px; bottom: -20px; width: 42px; height: 39px; display: grid; place-items: center; background: var(--ink-soft); color: var(--orange); font-size: 25px; line-height: 1; }
+.steps-list li:not(:last-child)::after { content: "↓"; position: absolute; z-index: 1; left: 50%; bottom: -20px; width: 42px; height: 39px; display: grid; place-items: center; background: var(--ink-soft); color: var(--orange); font-size: 25px; line-height: 1; transform: translateX(-50%); }
 .steps-list li:hover:not(:last-child)::after { animation: step-arrow-flow .65s ease-in-out infinite; }
 .steps-list h3 { margin: 0; font-size: 21px; }
 .steps-list p { max-width: 510px; margin: 8px 0 0; color: #a5aaa6; font-size: 13px; line-height: 1.68; }
 
 @keyframes step-arrow-flow {
-  0%, 100% { transform: translateY(-3px); }
-  50% { transform: translateY(6px); }
+  0%, 100% { transform: translate(-50%, -3px); }
+  50% { transform: translate(-50%, 6px); }
 }
 
 .about-section { padding: 110px 0; background: #e7e4da; }
@@ -304,7 +304,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .service-card:last-child { border-bottom: 0; }
   .service-card { min-height: 225px; }
   .steps-list li { padding-left: 56px; }
-  .steps-list li:not(:last-child)::after { left: 5px; }
   .steps-list h3 { font-size: 18px; }
   .benefits-grid > div { min-height: 145px; padding: 19px; }
   .benefits-grid strong { font-size: 29px; }
