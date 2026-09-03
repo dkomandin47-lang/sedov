@@ -72,7 +72,7 @@ export default function Home() {
             <h1><span>Большой</span><span>каталог</span><em>автозапчастей</em></h1>
             <p className="hero-lead">Подберём оригинальные запчасти и проверенные аналоги именно для вашего автомобиля. Сверим по VIN, проверим совместимость и предложим понятный выбор по цене и сроку.</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#request">Подобрать запчасти <span>↓</span></a>
+              <a className="button button-primary arrow-down-button" href="#request">Подобрать запчасти <span>↓</span></a>
               <a className="button button-ghost call-button" href="tel:+79610532770">
                 <span className="phone-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -127,7 +127,7 @@ export default function Home() {
             <span className="eyebrow">Простой процесс</span>
             <h2>От запроса<br />до нужной детали</h2>
             <p>Не нужно разбираться в артикулах и каталогах. Расскажите, что случилось, или отправьте VIN — остальное сделаем мы.</p>
-            <a className="button button-primary" href="#request">Оставить заявку <span>→</span></a>
+            <a className="button button-primary arrow-down-button" href="#request">Оставить заявку <span>↓</span></a>
           </div>
           <ol className="steps-list">
             <li><span>01</span><div><h3>Принимаем запрос</h3><p>По телефону или через форму: VIN, марка, модель и нужная запчасть.</p></div></li>

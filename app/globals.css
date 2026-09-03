@@ -71,9 +71,9 @@ p, li, small { text-wrap: pretty; }
 .button { min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 28px; padding: 0 25px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: inherit; font-size: 12px; font-weight: 850; cursor: pointer; transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease; }
 .hero-actions .button { min-height: 60px; padding-inline: 32px; font-size: 14px; }
 .hero-actions { width: 100%; justify-content: flex-start; }
-.hero-actions .button-primary > span { display: inline-block; }
-.hero-actions .button-primary:hover > span,
-.hero-actions .button-primary:focus-visible > span { animation: hero-arrow-sway .65s ease-in-out infinite; }
+.arrow-down-button > span { display: inline-block; }
+.arrow-down-button:hover > span,
+.arrow-down-button:focus-visible > span { animation: hero-arrow-sway .65s ease-in-out infinite; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { background: var(--orange); color: white; }
 .button-primary:hover { background: var(--orange-dark); }
