@@ -69,7 +69,7 @@ p, li, small { text-wrap: pretty; }
 .hero-lead { max-width: 790px; margin: 0; color: #c2c6c2; font-size: 19px; line-height: 1.7; }
 .hero-actions, .contact-actions { display: flex; align-items: center; gap: 16px; margin-top: 36px; }
 .button { min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 28px; padding: 0 25px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: inherit; font-size: 12px; font-weight: 850; cursor: pointer; transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease; }
-.hero-actions .button { min-height: 60px; padding-inline: 32px; font-size: 14px; }
+.hero-actions .button, .contact-actions .button { min-height: 60px; padding-inline: 32px; font-size: 14px; }
 .hero-actions { width: 100%; justify-content: flex-start; }
 .arrow-down-button > span { display: inline-block; }
 .arrow-down-button:hover > span,
@@ -84,6 +84,9 @@ p, li, small { text-wrap: pretty; }
 .phone-icon svg { width: 100%; height: 100%; }
 .call-button:hover .phone-icon,
 .call-button:focus-visible .phone-icon { animation: phone-wiggle .55s ease-in-out infinite; }
+.route-button > span { display: inline-block; }
+.route-button:hover > span,
+.route-button:focus-visible > span { animation: card-arrow-sway .7s ease-in-out infinite; }
 .button-outline { border-color: #aeb1ac; color: var(--ink); }
 .button-outline:hover { border-color: var(--orange); color: var(--orange-dark); }
 .button-dark { background: var(--ink); color: white; }
