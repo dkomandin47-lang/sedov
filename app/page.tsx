@@ -44,7 +44,7 @@ export default function Home() {
     <main id="top">
       <div className="topline">
         <div className="container topline-inner">
-          <span><i /> Работаем сегодня до 20:00</span>
+          <span>Пн–Сб: 09:00–20:00 · Вс: 10:00–18:00</span>
           <span>Балашов · Саратовское ш., 14</span>
         </div>
       </div>
@@ -56,7 +56,12 @@ export default function Home() {
             <span className="logo-copy"><strong>SEDOV</strong><small>автозапчасти</small></span>
           </a>
 
-          <nav className={menuOpen ? "header-nav open" : "header-nav"} aria-label="Основная навигация">
+          <nav id="main-navigation" className={menuOpen ? "header-nav open" : "header-nav"} aria-label="Основная навигация" onKeyDown={(event) => {
+            if (event.key === "Escape") {
+              closeMenu();
+              document.getElementById("menu-toggle")?.focus();
+            }
+          }}>
             <a href="#services" onClick={closeMenu}>Что подбираем</a>
             <a href="#how" onClick={closeMenu}>Как работаем</a>
             <a href="#about" onClick={closeMenu}>О нас</a>
@@ -69,7 +74,7 @@ export default function Home() {
             <a href="tel:+79610532770">+7 (961) 053-27-70</a>
           </div>
 
-          <button className={menuOpen ? "menu-button active" : "menu-button"} onClick={() => setMenuOpen((value) => !value)} aria-label="Открыть меню" aria-expanded={menuOpen}>
+          <button id="menu-toggle" className={menuOpen ? "menu-button active" : "menu-button"} onClick={() => setMenuOpen((value) => !value)} aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"} aria-expanded={menuOpen} aria-controls="main-navigation">
             <span /><span /><span />
           </button>
         </div>
@@ -79,8 +84,8 @@ export default function Home() {
         <div className="container hero-layout">
           <div className="hero-content">
             <span className="eyebrow">Точный подбор по VIN</span>
-            <h1><span>Большой</span><span>каталог</span><em>автозапчастей</em></h1>
-            <p className="hero-lead">Подберём оригинальные запчасти и проверенные аналоги именно для вашего автомобиля. Сверим по VIN, проверим совместимость и предложим понятный выбор по цене и сроку.</p>
+            <h1><span>Большой каталог</span><em>автозапчастей</em></h1>
+            <p className="hero-lead">Подберём оригинал или проверенный аналог для вашего автомобиля. Сверим по VIN, уточним цену и срок — вам останется выбрать и забрать деталь в Балашове.</p>
             <div className="hero-actions">
               <a className="button button-primary arrow-down-button" href="#request">Подобрать запчасти <span>↓</span></a>
               <a className="button button-ghost call-button" href="tel:+79610532770">
@@ -99,7 +104,7 @@ export default function Home() {
 
       <section className="trust-strip" aria-label="Преимущества">
         <div className="container trust-grid">
-          <div><p><strong>Подбор без ошибок</strong><small>Проверяем деталь по VIN и каталожным номерам</small></p></div>
+          <div><p><strong>Проверка совместимости</strong><small>Сверяем VIN и каталожные номера деталей</small></p></div>
           <div><p><strong>Понятный выбор</strong><small>Объясняем разницу между оригиналом и аналогами</small></p></div>
           <div><p><strong>Магазин в Балашове</strong><small>Заказ можно забрать на Саратовском шоссе, 14</small></p></div>
         </div>
@@ -110,9 +115,9 @@ export default function Home() {
           <div className="section-head">
             <div>
               <span className="eyebrow dark">Основные направления</span>
-              <h2>Подберём всё, что<br />нужно автомобилю</h2>
+              <h2>Подберём всё, что нужно автомобилю</h2>
             </div>
-            <p>Работаем с легковыми автомобилями отечественных и зарубежных марок. Если позиции нет в наличии — найдём у поставщиков и привезём под заказ.</p>
+            <p>Запчасти для отечественных и зарубежных легковых автомобилей. Если детали нет в наличии, уточним возможность заказа у поставщиков.</p>
           </div>
 
           <div className="services-grid">
@@ -120,7 +125,7 @@ export default function Home() {
               <article className="service-card" key={service.title}>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
-                <a href="#request" aria-label={`Запросить подбор: ${service.title}`}>Запросить подбор <b>↗</b></a>
+                <a href="#request" aria-label={`Запросить подбор: ${service.title}`}>Запросить подбор <b aria-hidden="true">↗</b></a>
               </article>
             ))}
           </div>
@@ -131,14 +136,14 @@ export default function Home() {
         <div className="container how-layout">
           <div className="how-intro">
             <span className="eyebrow">Простой процесс</span>
-            <h2>От запроса<br />до нужной детали</h2>
-            <p>Не нужно разбираться в артикулах и каталогах. Расскажите, что случилось, или отправьте VIN — остальное сделаем мы.</p>
+            <h2>От запроса до нужной детали</h2>
+            <p>Не знаете артикул? Назовите автомобиль и нужную деталь или укажите VIN — поможем с подбором.</p>
             <a className="button button-primary arrow-down-button" href="#request">Оставить заявку <span>↓</span></a>
           </div>
           <ol className="steps-list">
-            <li><div><h3>Принимаем запрос</h3><p>По телефону или через форму: VIN, марка, модель и нужная запчасть.</p></div></li>
+            <li><div><h3>Принимаем запрос</h3><p>Уточняем марку, модель, VIN и какую запчасть вы ищете.</p></div></li>
             <li><div><h3>Проверяем совместимость</h3><p>Сверяем каталожные номера и исключаем неподходящие варианты.</p></div></li>
-            <li><div><h3>Предлагаем выбор</h3><p>Оригинал и проверенные аналоги в разном бюджете — решение остаётся за вами.</p></div></li>
+            <li><div><h3>Предлагаем выбор</h3><p>Объясняем разницу между вариантами, согласовываем цену и срок.</p></div></li>
             <li><div><h3>Выдаём заказ</h3><p>Сообщаем о готовности и выдаём заказ в магазине в Балашове.</p></div></li>
           </ol>
         </div>
@@ -148,9 +153,9 @@ export default function Home() {
         <div className="container about-layout">
           <div className="about-card">
             <span className="eyebrow dark">Почему SEDOV</span>
-            <h2>Не просто продаём —<br />помогаем разобраться</h2>
-            <p>Мы за понятный сервис без сложных терминов и случайных покупок. Важно, чтобы деталь действительно подошла, а вы понимали, за что платите.</p>
-            <blockquote>«Лучший заказ — тот, с которым клиент возвращается не из-за ошибки, а за следующей деталью.»</blockquote>
+            <h2>Помогаем выбрать подходящую деталь</h2>
+            <p>Объясним, чем отличаются оригинал и аналоги, что подходит вашему автомобилю и какие варианты есть в вашем бюджете.</p>
+            <blockquote>Важно, чтобы деталь подошла, а вы понимали, за что платите.</blockquote>
           </div>
           <div className="benefits-grid">
             {benefits.map((benefit) => (
@@ -164,30 +169,31 @@ export default function Home() {
         <div className="container request-layout">
           <div className="request-copy">
             <span className="eyebrow">Бесплатная консультация</span>
-            <h2>Расскажите, какая<br />деталь нужна</h2>
-            <p>Ответим, уточним параметры автомобиля и предложим подходящие варианты.</p>
+            <h2>Какая деталь вам нужна?</h2>
+            <p>Укажите автомобиль и опишите, что ищете. Если не знаете точное название детали, расскажите о проблеме.</p>
             <a className="request-phone" href="tel:+79610532770"><small>Можно сразу позвонить</small><strong>+7 (961) 053-27-70</strong></a>
           </div>
 
           <div className="request-form-wrap">
             {requestSent ? (
-              <div className="success-card">
-                <span>✓</span>
-                <h3>Спасибо за заявку</h3>
-                <p>Это демонстрационная версия лендинга, поэтому данные никуда не отправлены. После подключения сервера заявка будет приходить менеджеру.</p>
-                <button className="button button-outline" onClick={() => setRequestSent(false)}>Отправить ещё одну</button>
+              <div className="success-card" role="status" aria-live="polite">
+                <span aria-hidden="true">✓</span>
+                <h3>Форма заполнена</h3>
+                <p>В демоверсии заявка не отправляется. Для подбора запчастей позвоните в магазин.</p>
+                <a className="button button-primary call-button" href="tel:+79610532770">Позвонить <PhoneIcon /></a>
+                <button className="text-button" onClick={() => setRequestSent(false)}>Вернуться к форме</button>
               </div>
             ) : (
-              <form onSubmit={submitRequest}>
-                <div className="form-title"><h3>Запросить подбор</h3><span>Ответим за 15 минут</span></div>
+              <form onSubmit={submitRequest} aria-describedby="request-note">
+                <div className="form-title"><h3>Запросить подбор</h3><span>По VIN или модели</span></div>
                 <div className="form-row">
-                  <label>Ваше имя<input name="name" required placeholder="Как к вам обращаться" /></label>
-                  <label>Телефон<input name="phone" type="tel" required placeholder="+7 (___) ___-__-__" /></label>
+                  <label>Ваше имя<input name="name" autoComplete="given-name" required placeholder="Как вас зовут" /></label>
+                  <label>Телефон<input name="phone" type="tel" autoComplete="tel" inputMode="tel" required placeholder="+7 (___) ___-__-__" /></label>
                 </div>
                 <label>Автомобиль или VIN<input name="car" placeholder="Например, Kia Rio 2020 или VIN" /></label>
                 <label>Какая деталь нужна<textarea name="part" required rows={3} placeholder="Опишите деталь или проблему" /></label>
                 <button className="button button-primary button-wide" type="submit">Отправить заявку <span>→</span></button>
-                <small className="privacy-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</small>
+                <small id="request-note" className="privacy-note">Демоверсия: форма пока не отправляет заявки. Для заказа позвоните нам.</small>
               </form>
             )}
           </div>
@@ -200,9 +206,9 @@ export default function Home() {
             <span className="eyebrow dark">Ждём вас</span>
             <h2>Магазин в Балашове</h2>
             <div className="contact-items">
-              <div><span>01</span><p><small>Адрес</small><strong>Саратовское ш., 14, Балашов</strong></p></div>
-              <div><span>02</span><p><small>Режим работы</small><strong>Пн–Сб: 09:00–20:00</strong><em>Вс: 10:00–18:00</em></p></div>
-              <div><span>03</span><p><small>Телефон</small><a href="tel:+79610532770">+7 (961) 053-27-70</a></p></div>
+              <div><p><small>Адрес</small><strong>Саратовское ш., 14, Балашов</strong></p></div>
+              <div><p><small>Режим работы</small><strong>Пн–Сб: 09:00–20:00</strong><em>Вс: 10:00–18:00</em></p></div>
+              <div><p><small>Телефон</small><a href="tel:+79610532770">+7 (961) 053-27-70</a></p></div>
             </div>
             <div className="contact-actions">
               <a className="button button-primary call-button" href="tel:+79610532770">Позвонить <PhoneIcon /></a>
@@ -211,7 +217,7 @@ export default function Home() {
           </div>
 
           <a className="map-card" href="https://yandex.ru/maps/?text=Саратовское%20шоссе%2C%2014%2C%20Балашов" target="_blank" rel="noreferrer" aria-label="Открыть карту проезда к магазину SEDOV в Балашове">
-            <img src="/balashov-map.png" alt="Карта проезда: Саратовское шоссе, 14, Балашов" />
+            <img src="/balashov-map.png" alt="Карта проезда: Саратовское шоссе, 14, Балашов" loading="lazy" width={1302} height={1044} />
             <span>Открыть в Яндекс Картах ↗</span>
           </a>
         </div>
